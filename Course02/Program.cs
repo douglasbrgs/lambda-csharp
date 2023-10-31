@@ -2,10 +2,10 @@
 
 namespace Course02
 {
+    delegate double BinaryNumericOperation(double n1, double n2);
+
     internal class Program
     {
-        delegate double BinaryNumericOperation(double n1, double n2);
-
         static void Main(string[] args)
         {
             double a = 10;
