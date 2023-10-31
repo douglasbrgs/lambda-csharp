@@ -14,7 +14,7 @@ namespace Course01
             products.Add(new Product("Notebook", 1200.0));
             products.Add(new Product("Tablet", 450.0));
 
-            Comparison<Product> comp = CompareProducts;
+            Comparison<Product> comp = (p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper());
 
             products.Sort(comp);
 
@@ -22,11 +22,6 @@ namespace Course01
             {
                 Console.WriteLine(prod);
             }
-        }
-
-        static int CompareProducts(Product p1, Product p2)
-        {
-            return p1.Name.ToUpper().CompareTo(p2.Name.ToUpper());
         }
     }
 }
