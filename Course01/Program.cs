@@ -14,12 +14,17 @@ namespace Course01
             products.Add(new Product("Notebook", 1200.0));
             products.Add(new Product("Tablet", 450.0));
 
-            products.Sort();
+            products.Sort(CompareProducts);
 
             foreach (Product prod in products)
             {
                 Console.WriteLine(prod);
             }
+        }
+
+        static int CompareProducts(Product p1, Product p2)
+        {
+            return p1.Name.ToUpper().CompareTo(p2.Name.ToUpper());
         }
     }
 }
