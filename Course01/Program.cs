@@ -14,7 +14,9 @@ namespace Course01
             products.Add(new Product("Notebook", 1200.0));
             products.Add(new Product("Tablet", 450.0));
 
-            products.Sort(CompareProducts);
+            Comparison<Product> comp = CompareProducts;
+
+            products.Sort(comp);
 
             foreach (Product prod in products)
             {
