@@ -14,11 +14,11 @@ namespace Course05
             list.Add(new Product("Tablet", 350.50));
             list.Add(new Product("HD Case", 80.90));
 
-            Action<Product> action = UpdateProduct;
+            //Action<Product> action = UpdateProduct;
 
-            list.ForEach(action);
+            list.ForEach(p => { p.Price += p.Price * 0.1; });
+
             list.ForEach(p => Console.WriteLine(p));
-
         }
 
         public static void UpdateProduct(Product p)
